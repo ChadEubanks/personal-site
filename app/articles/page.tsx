@@ -1,17 +1,17 @@
 import Image from 'next/image'
-import styles from './page.module.css'
+import styles from '../page.module.css'
 import Link from 'next/link';
 
-export default function Home() {
+export default function Articles() {
   return (
     <div className={styles.container}>
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Home Page
+          Welcome to Articles
         </h1>
 
         <p className={styles.description}>
-          Go to the article <Link href="/articles">page</Link>
+          Go to the home <Link href="/">page</Link>
         </p>
 
         <p className={styles.description}>
