@@ -1,36 +1,20 @@
 import Image from 'next/image'
-import styles from '../page.module.css'
+import styles from './contact.module.css'
 import Link from 'next/link';
 
 export default function Articles() {
   return (
-    <div className={styles.container}>
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to Contact Page
-        </h1>
-
-        <p className={styles.description}>
-          Go to the home <Link href="/">page</Link>
-        </p>
-
-        <p className={styles.description}>
-          Go to the articles <Link href="/articles">page</Link>
-        </p>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer>
-    </div>
+    <>
+      <div className={styles.document}>
+        <div className={styles.navigation}>
+          <header className={styles.header}>Navigation</header>
+          <Link className={styles.link} href='/articles'>articles</Link>
+          <Link className={styles.link} href='/contact'>contact</Link>
+        </div>
+      </div>
+      <div className={styles.fullScreen}>
+      <div className={styles.email}>chad.d.eubanks@gmail.com</div>
+      </div>
+    </>
   )
 }

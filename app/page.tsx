@@ -1,36 +1,23 @@
 import Image from 'next/image'
 import styles from './page.module.css'
 import Link from 'next/link';
+import hero from '../public/hero.png';
 
 export default function Home() {
   return (
-    <div className={styles.container}>
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Home Page
-        </h1>
-
-        <p className={styles.description}>
-          Go to the article <Link href="/articles">page</Link>
-        </p>
-
-        <p className={styles.description}>
-          Go to the contact <Link href="/contact">page</Link>
-        </p>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer>
-    </div>
+    <>
+      <div className={styles.document}>
+        <div className={styles.navigation}>
+          <header className={styles.header}>Navigation</header>
+          <Link className={styles.link} href='/articles'>articles</Link>
+          <Link className={styles.link} href='/contact'>contact</Link>
+        </div>
+      </div>
+      <div className={styles.fullScreen}>
+        <span className={styles.logo}>
+          <Image src={hero} alt="Eubanks Desktop Image" height="320" />
+        </span>
+      </div>
+    </>
   )
 }
